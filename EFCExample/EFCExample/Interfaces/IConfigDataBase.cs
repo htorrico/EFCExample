@@ -4,9 +4,9 @@ using System.Text;
 
 namespace EFCExample.Interfaces
 {
-    public class IConfigDataBase
+    public interface IConfigDataBase
     {
         //Implementación Ruta
-       public string GetFullPath(string databaseFileName);
+        string GetFullPath(string databaseFileName);
     }
 }

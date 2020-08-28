@@ -6,7 +6,7 @@ using System.Text;
 
 namespace EFCExample.DataContext
 {
-    class AppDbContext : DbContext
+  public  class AppDbContext : DbContext
     {
         //Ubicación de la base de datos
         string DbPath = string.Empty;
