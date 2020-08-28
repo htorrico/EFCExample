@@ -12,7 +12,7 @@ namespace EFCExample
         {
             InitializeComponent();
             GetContext().Database.EnsureCreated();
-            MainPage = new MainPage();
+            MainPage = new CourseView();
         }
         // Método para obtener el contexto cuando se inicia la aplicación
         public static AppDbContext GetContext()

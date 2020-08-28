@@ -19,13 +19,11 @@ namespace EFCExample
         {
             InitializeComponent();
 
-            ServicePerson service = new ServicePerson();
-
-            service.DeleteAll();
+            DBDataAccess<Person> service = new DBDataAccess<Person>();            
             service.Create(new Person { PersonID = 2, FirstName = "Hugo", LastName = "Torrico" });
             service.Create(new Person { PersonID = 3, FirstName = "Juan", LastName = "Torrico" });
             service.Create(new Person { PersonID = 4, FirstName = "Janeth", LastName = "Torrico" });
-            List<Person> people = service.Get();
+            List<Person> people = service.Get().ToList();
             lstPeople.ItemsSource = people;
         }
     }
