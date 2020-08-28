@@ -32,6 +32,24 @@ namespace EFCExample.Services
             return created;
         }
 
+        public bool DeleteAll()
+        {
+            bool created;
+
+            try
+            {
+                _context.People.RemoveRange(_context.People.ToList());
+                _context.SaveChanges();
+                created = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return created;
+        }
+
         public List<Person> Get()
         {
             List<Person> people = null;

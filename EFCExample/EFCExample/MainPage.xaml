@@ -12,7 +12,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
+                        <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding PersonID}"></Label>
                             <Label Text="{Binding FirstName}"></Label>
                             <Label Text="{Binding LastName}" ></Label>
